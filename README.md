@@ -1,3 +1,3 @@
-# trabajos prácticos de Fip
+# trabajos prácticos de programacion
 
 **los trabajos prácticos estaran ecritos en TypeScript**
