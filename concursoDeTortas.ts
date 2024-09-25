@@ -1,18 +1,20 @@
 import* as rts from 'readline-sync';
 
 let cantConcursantes: number = rts.questionInt ("ingrese la cantidad de participantes que participan de este concurso");
-let puntajeGanador: mumber = 0;
+let puntajeGanador: number = 0;
 let hayEmpate: boolean = false;
 
 determinarGanador ();
 
 function determinarGanador () {
+  let participanteGanador: number = 0; 
   
   while (cantConcursantes > 0) {
    let puntaje: number = obtenerPuntaje (); 
 
    if (puntajeGanador < puntaje){
       puntajeGanador = puntaje;
+      participanteGanador++; 
    } else if (puntajeGanador === puntaje) {
        hayEmpate = true;
      }
@@ -22,7 +24,7 @@ function determinarGanador () {
   if (hayEmpate) {
     console.log ("hay empate para el puntaje " + puntajeGanador); 
   } else {
-    console.log (" el puntaje ganador es de " + puntajeGanador); 
+    console.log (" el puntaje ganador es de " + puntajeGanador + " para el puntaje " + puntajeGanador); 
   } 
 }
 
