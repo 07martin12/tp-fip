@@ -5,7 +5,13 @@ const maxArr: number = rls.question ("ingrese la longitud que tendran los arregl
 let arr_1: number [] = cargarArr(maxArr);
 let arr_2: number [] = cargarArr(maxArr);
 
-console.log ("el producto escalar para los arreglos\narr_1: " + publicarArr (arr_1) + "\narr_2: " + publicarArr (arr_2) + "\nes de: " + productoEscalar (arr_1,arr_2)); 
+console.log ("el producto escalar para los arreglos");
+console.log ("arr_1"); 
+publicarArr (arr_1); 
+console.log ("arr_2");
+publicarArr (arr_2); 
+console.log ("es de: ");
+productoEscalar (arr_1,arr_2); 
 
 function cargarArr (max:number) {
   let arr: number [] = new Array (max);
