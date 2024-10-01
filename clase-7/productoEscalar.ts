@@ -28,18 +28,12 @@ function productoEscalar (arr_1: number [], arr_2: number []) {
   let producto: number = 1;
   let suma: number = 0; 
 
-  for (let pos: number = 0; pos < arr.length; pos++) {
+  for (let pos: number = 0; pos < arr_1.length; pos++) {
       producto = arr_1 [pos] * arr_2 [pos]; 
       suma += producto; 
   }
   
   return suma;
-}
-
-function calcularProducto (arr: number []) {
-      producto *= arr [pos]; 
-  }
-   return producto; 
 }
 
 
