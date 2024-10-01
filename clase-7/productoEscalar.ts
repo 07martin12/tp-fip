@@ -10,8 +10,7 @@ console.log ("arr_1");
 publicarArr (arr_1); 
 console.log ("arr_2");
 publicarArr (arr_2); 
-console.log ("es de: ");
-productoEscalar (arr_1,arr_2); 
+console.log ("es de: " + productoEscalar (arr_1,arr_2)); 
 
 function cargarArr (max:number) {
   let arr: number [] = new Array (max);
@@ -25,7 +24,7 @@ function cargarArr (max:number) {
 
 function publicarArr (arr:number []) {
   for (let pos: number = 0; pos<arr.length; pos++) {
-    console.log (arr [pos] +"|\r"); 
+    console.log (arr [pos]); 
   }
 }
 
