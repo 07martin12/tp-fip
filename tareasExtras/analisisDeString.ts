@@ -1,3 +1,4 @@
+
 const paragraph: string =
     'Urania. Qué nombre.\n' +
     'A la gente le gusta, le parece sonoro, original, raro.\n' +
@@ -12,6 +13,10 @@ const paragraph: string =
     'En aquellos días no había problemas en la casa.\n' +
     'Las cosas cambiaron después, claro. Cambiaron tanto.';
 
+    let fullText:string = paragraph;
+    let searchTerm: string = "urania";
+
+    console.log (howManyTextInPara(fullText,searchTerm));
 
 //devuelve true si searchTerm se encuentra en fullText
 function isTextInPara(fullText: string, searchTerm: string): boolean {
@@ -21,26 +26,34 @@ function isTextInPara(fullText: string, searchTerm: string): boolean {
 //completar la funcion para que devuelva la cantidad de veces que searchTerm aparece dentro de fullText
 function howManyTextInPara(fullText: string, searchTerm: string): number { 
     //cargo todas las palabras de la cadena en un arreglo 
-    let listaDeConcursantes: number[] = cargarArreglo (fullText).toLowerCase(); 
-
-   
-    let pos: number = 0;
-
-    while (pos < fullText.length) {
-
-    pos++;
-   }
-   
-    let palabraOriginal: string = buscarPalabra (fullText).toLowerCase(); 
-   let palabraBuscada: string = searchTerm.toLowerCase (); 
-   
-   
+    let listaDePalabras: string [] = cargarArreglo (fullText); 
     let contador: number = 0;
-    if (isTextInPara(fullText, searchTerm)) { 
-        //si el metodo booleano devuelve true la variable cont se incrementa
-        contador++; 
+
+    //recorro el arreglo creado y busco coincidencias
+    for (let pos: number = 0; pos<listaDePalabras.length; pos++) {
+        if (listaDePalabras [pos] == searchTerm.toLowerCase()) {
+            contador++;
+        }
     }
+
     return contador;
 }
+
+function cargarArreglo (fullText: string): string [] {
+    let arr: string [] = new Array (); 
+    let i: number = 0
+
+    for (let pos:number = 0; pos<fullText.length; pos++) {
+        //si encuentro un espacio significa que la palabra ya termino y se guarda en una posición del arreglo
+        if (fullText [pos] != " ") {
+            arr [i] += fullText [pos].toLowerCase(); 
+        } else {
+            i++;
+        }
+    }
+
+    return arr; 
+}
+
 
 
