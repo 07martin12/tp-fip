@@ -1,4 +1,4 @@
-import* as rls form 'readline-sync'; 
+import* as rls from 'readline-sync'; 
 
 const maxArr: number = rls.question ("ingrese la longitud que tendran los arreglos 1 y 2");
 
